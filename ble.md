@@ -29,7 +29,8 @@ Notez que le passage à des signaux I/Q n’est pas gratuit. À taux d’échant
 Les spécifications nous apprennent qu’il y a 40 canaux HF numérotés de 0 à 39 et espacés tout les 2MHz de 2,402GHz à 2,480GHz.  
 On y voit aussi que les canaux d’annonce sont les numéros 0 (2,402GHz), 12 (2,426GHz) et 39 (2,480GHz).  
 L’hétérodynage à 2,461GHz lors de la capture les a translatés de -2,461GHz et nous les retrouvons donc à -59MHz, -35MHz et 19MHz. Remarquez les 2 fréquences négatives que je garde comme telles car nous sommes en I/Q !!  
-Là, l’échantillonnage 20MHz va produire les fameuses images fantômes de ces canaux en les translatant, en plus ou en moins, d’un multiple de 20MHz. Mais nous ne verrons que les fantômes qui se retrouvent dans la bande exploitable de l'échantillonnage 20MHz, c’est à dire entre -10MHz et 10MHz.
+S'il était activé, le fameux filtre anti-fantôme les enlèverait car elles sont en dehors de la bande exploitable de l'échantillonnage 20MHz qui est de -10MHz à 10MHz.  
+Mais là, l’échantillonnage 20MHz va produire les fameuses images fantômes en les translatant, en plus ou en moins, d’un multiple de 20MHz. Mais nous ne verrons que les fantômes qui se retrouvent dans la bande -10MHz à 10MHz.  
 * Pour le canal 0, nous verrons son image à 1MHz, c’est à dire -59MHz + 3 x 20MHz,
 * Pour le canal 12, nous verrons son image à 5MHz c’est à dire -35MHz + 2 x 20MHz,
 * Pour le canal 39, nous verrons son image à -1MHz c’est à dire 19MHz - 1 x 20MHz.
