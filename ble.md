@@ -21,7 +21,7 @@ Comment se fait la distinction de signe en I/Q ?
 Un peu comme si on avait deux bouchons.  
 Une des conséquences de l'existence des fréquences négatives, c’est qu’en I/Q un échantillonnage sans filtre anti-repliement ne produit justement pas réellement de repliement !!!  
 Car un échantillonnage sans filtre produit en fait une série de fréquences images fantômes du signal original qui sont ses translatées, en plus ou en moins, d’un multiple de la fréquence d'échantillonnage. En signal classique, les fréquences fantômes qui sont négatives sont repliées d’où ce phénomène de repliement alors qu’en I/Q elles ne le sont pas.  
-Les anglo-saxon appellent *aliasing* l’apparition des signaux fantômes et *folding* le phénomène de repliement. Nous, on mélange un peu les deux en parlant toujours que de repliement.  
+Les anglo-saxons appellent *aliasing* l’apparition des signaux fantômes et *folding* le phénomène de repliement. Nous, on mélange un peu les deux en parlant toujours que de repliement.  
 Et l’hétérodynage en I/Q ?  
 La formule de trigo magique devient encore plus magique : e<sup>*a*</sup> x e<sup>-*b*</sup> = e<sup>*a*-*b*</sup>. Vous n’avez même plus le terme en *a*+*b* à filtrer !!! (ici *a* = 2*i*𝝅*ft*).  
 Notez que le passage à des signaux I/Q n’est pas gratuit. À taux d’échantillonnage identique, le I/Q est deux fois plus volumineux que le classique car il y a I et il y a Q.
