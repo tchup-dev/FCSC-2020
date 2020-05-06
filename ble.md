@@ -43,7 +43,7 @@ On avait l’indication du flow graph à utiliser au début dans GNU Radio :
 Notez les poignées bleues qui signalent le mode complexe propre  au I/Q.  
 On obtenait ceci :  
 ![Chute d'eau](image5.png)  
-Nous voyons bien les canaux d’annonce qui nous intéressent mais il y en a plein d’autres. Ce sont les autres canaux BLE, nous pouvons les ignorer car on nous a dit de chercher dans les canaux d’annonce. Mais même sur -1GHz, 1GHz et 5GHz tout n’est pas à prendre car d’autres canaux ont aussi leurs images fantômes là. Par exemple, le canal 2 tombe aussi sur 5GHz. Il y a aussi les canaux 25 à 34 qui tombent direct dans la bande et n'ont pas besoin de fantôme pour les représenter.  
+Nous voyons bien les canaux d’annonce qui nous intéressent mais il y en a plein d’autres. Ce sont les autres canaux BLE, nous pouvons les ignorer car on nous a dit de chercher dans les canaux d’annonce. Mais même sur -1GHz, 1GHz et 5GHz tout n’est pas à prendre car d’autres canaux ont aussi leurs images fantômes là. Par exemple, le canal 2 tombe aussi sur 5GHz. Il y a aussi les canaux 25 à 34 qui tombent direct dans la bande et n'ont pas besoin de fantôme pour les représenter. Avec le filtre actif, nous n'aurions qu'eux.  
 Alors, comment savoir ?
 # Un tour dans le temporel
 Ce flow graph nous produit un fichier son avec le contenu de ble.sig :  
