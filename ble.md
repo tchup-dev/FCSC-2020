@@ -59,7 +59,7 @@ Nous avons trois signaux à des fréquences distinctes. Ouf ! Sans I/Q, -1MHz se
 Il est temps d’utiliser GNU Radio pour voir si nous observons bien ces 3 fréquences dans la capture.
 # La chute d’eau
 On avait l’indication du flow graph à utiliser au début dans GNU Radio :  
-![Flow graph Chute d'eau](image12.png)  
+![Flow graph Chute d'eau](image14.png)  
 Notez les poignées bleues qui signalent le mode complexe propre  au I/Q.  
 On obtenait ceci :  
 ![Chute d'eau](image5.png)  
