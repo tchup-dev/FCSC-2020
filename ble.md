@@ -1,3 +1,22 @@
+# Énoncé
+Une personne de votre entourage ne jure que par le traitement du signal analogique.  
+Pour lui montrer certains des avantages du traitement du signal numérique, vous décidez de le mettre au défi :
+il doit émettre des annonces Bluetooth Low Energy sur chacun des canaux d'annonce, tandis que vous ne disposez que d'une radio logicielle pour les capturer tous.  
+
+Vous lui montrez alors qu'en désactivant le filtre anti-repliement de l'étage d'entrée, vous arrivez à capturer toutes les communications.  
+
+La capture fournie (ble.sig) a été faite en désactivant le filtre anti-repliement, à la fréquence centrale 2461MHz et avec un taux d'échantillonnage de 20MHz.  
+
+**Note** : Le format de fichier est une capture au format IQ, avec chaque échantillon I et Q un nombre flottant de 32 bits. Les logiciels de traitement du signal standard n'ont pas de problème à ingérer ce format.  
+
+**Note 2** : Pour ouvrir ce fichier avec numpy, il faut utiliser le format complex64 : `numpy.fromfile(<filename>, dtype = numpy.complex64)`. Pour utiliser le logiciel GNURadio, il faut utiliser le bloc File Source et le format complex.  
+
+**Note 3** : Pour commencer à analyser la capture, vous pouvez utiliser ce flowgraph dans GNU Radio :  
+![Flow graph Chute d'eau](image12.png)  
+
+SHA256(ble.sig) = ae427526808cf425a2f2ac818d0612d88cbaa3e5ae12c27ac58cb3dde65b3993.  
+[ble.sig](ble.sig)  
+<hr><br>
 Sans l’indication mentionnant GNURadio, je n’aurais jamais trouvé cet outil indispensable. Mais j'ai beaucoup tâtonné quand même…
 # Mauvaise direction
 Une soft radio, ça semblait cool pour simuler une radio et ma première idée a été d'essayer d’y reconstruire la HF pour ré-hétérodyner ensuite chaque canal avec la fréquence adaptée. Il faut méchamment sur-échantillonner pour y arriver mais j'ai ainsi pu "voir" (virtuellement) le signal HF à 2,4GHz. Un peu un rêve qu'aucun oscilloscope n'aurais pu me tracer. Sauf que dans ce signal, la modulation FM ne se distingue plus à l'œil. C'est logique en fait mais je n'avais jamais vraiment pris conscience de ce phénomène. L’hétérodynage réalise une translation des fréquences et l’excursion de fréquence (Δ*f*) de la FM n’est donc pas modifiée au passage. Le même Δ*f* d’environ 200kHz qui est visible à l’œil sur un signal à 1MHz devient imperceptible sur un signal à 2,4GHz.  
