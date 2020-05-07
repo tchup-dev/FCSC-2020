@@ -1,4 +1,5 @@
-# Énoncé
+# Bluetooth Low Energy  
+# Énoncé  
 Une personne de votre entourage ne jure que par le traitement du signal analogique.  
 Pour lui montrer certains des avantages du traitement du signal numérique, vous décidez de le mettre au défi :
 il doit émettre des annonces Bluetooth Low Energy sur chacun des canaux d'annonce, tandis que vous ne disposez que d'une radio logicielle pour les capturer tous.  
