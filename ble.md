@@ -17,7 +17,7 @@ La capture fournie (ble.sig) a été faite en désactivant le filtre anti-replie
 SHA256(ble.sig) = ae427526808cf425a2f2ac818d0612d88cbaa3e5ae12c27ac58cb3dde65b3993.  
 [ble.sig](ble.sig)  
 <hr><br>
-Sans l’indication mentionnant GNURadio, je n’aurais jamais trouvé cet outil indispensable. Mais j'ai beaucoup tâtonné quand même…
+Sans l’indication mentionnant GNURadio, je n’aurais jamais trouvé cet outil indispensable. Mais j'ai beaucoup tâtonné quand même…  
 # Mauvaise direction
 Une soft radio, ça semblait cool pour simuler une radio et ma première idée a été d'essayer d’y reconstruire la HF pour ré-hétérodyner ensuite chaque canal avec la fréquence adaptée. Il faut méchamment sur-échantillonner pour y arriver mais j'ai ainsi pu "voir" (virtuellement) le signal HF à 2,4GHz. Un peu un rêve qu'aucun oscilloscope n'aurais pu me tracer. Sauf que dans ce signal, la modulation FM ne se distingue plus à l'œil. C'est logique en fait mais je n'avais jamais vraiment pris conscience de ce phénomène. L’hétérodynage réalise une translation des fréquences et l’excursion de fréquence (Δ*f*) de la FM n’est donc pas modifiée au passage. Le même Δ*f* d’environ 200kHz qui est visible à l’œil sur un signal à 1MHz devient imperceptible sur un signal à 2,4GHz.  
 La modulation FM se retrouve dans la capture. Inutile d’aller la rejouer à 2,4GHz.  
